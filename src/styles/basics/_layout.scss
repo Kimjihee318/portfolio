@@ -1,0 +1,120 @@
+@import "../setup/variables.scss";
+// vendors
+@import "../bootstrap/variables.scss";
+@import "../bootstrap/breakpoints.scss";
+@import "../bootstrap/functions.scss";
+
+// this is contents
+#comps {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: $aside-width;
+}
+#aside-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $aside-width;
+  height: 100%;
+  padding-left: 1.8rem;
+  background-color: #fff;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: $aside-width;
+  z-index: 2000;
+  height: 60px;
+  border-bottom: $border;
+  background-color: #fff;
+  line-height: 60px;
+  > * {
+    float: left;
+  }
+  h2 {
+    margin: 0;
+    margin-left: 1rem;
+    font-weight: 400;
+    color: $point-color;
+    background-color: transparent !important;
+  }
+  > ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: $aside-width;
+    height: inherit;
+    border-right: $border;
+    li {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+    i {
+      position: relative;
+      top: 5px;
+      color: $point-color;
+    }
+  }
+}
+@include media-breakpoint-down (sm) {
+  // @ < 576px
+  // mobile
+  #aside-wrapper {
+    display: none;
+  }
+  #header {
+    right: 0;
+    > ul {
+      width: 100%;
+    }
+  }
+  #comps {
+    right: 0;
+  }
+}
+@include media-breakpoint-between (sm, md) {
+  // 576px < @ < 768px,
+  // mobile
+  #aside-wrapper {
+    z-index: 100;
+  }
+  #header {
+    right: 0;
+    > ul {
+      width: 400px;
+    }
+  }
+  #comps {
+    right: 0;
+  }
+}
+@include media-breakpoint-between (md, lg) {
+  // 768px < @ < 992px,
+  // ipad
+  #aside-wrapper {
+    z-index: 100;
+  }
+  #header {
+    right: 0;
+    ul {
+      width: 400px;
+    }
+  }
+}
+@include media-breakpoint-between (lg, xl) {
+  // 992px < @ < 1200px
+  // macbook
+  // standard
+}
+// @include media-breakpoint-up (xl) {
+//   //@ > 1200px
+// }
+// @include media-breakpoint-between (xl, xxl) {
+//   //1200px < @ < 1400px
+// }
+// @include media-breakpoint-up(xxl) {
+//   // @ > 1400px
+// }

@@ -1,0 +1,28 @@
+input[type=checkbox] {
+  display: none;
+}
+// 바로 뒤에 있는 레벨 셀렉터
+input[type=checkbox] + label {
+  border: $border;
+  border-radius: 4px;
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 0.5rem;
+}
+input[type=checkbox]:checked + label {
+  background-color: $point-color;
+}
+input[type=checkbox]:checked + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  // background: url(https://previews.123rf.com/images/helmut1979/helmut19791508/helmut1979150800063/43544683-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%EB%B9%A8%EA%B0%84%EC%83%89-%EC%B2%B4%ED%81%AC-%EA%B8%B0%ED%98%B8-%EA%B7%B8%EB%A6%BC.jpg) -19px top no-repeat;
+}
+// 두번째 셀렉터
+label:last-child {
+  line-height: 1.8rem;
+  padding-left: 0.1rem;
+  position: relative;
+  top: -0.2rem;
+}
