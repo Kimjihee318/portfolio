@@ -1,6 +1,8 @@
 <template>
   <div id="aside-wrapper">
-    <div id="aside-header"></div>
+    <div id="aside-header">
+      <i @click="clickFavorite" class="material-icons">favorite</i>를 클릭 해보세요!
+    </div>
     <div id="aside-body">
       <ul id="categories">
         <p>Categories</p>
@@ -23,8 +25,8 @@
             <i @click="clickFavorite" class="material-icons">favorite</i>
           </li>
         </ul>
-        <p>You like my works!</p>
-        <div>
+        <p>{{ hMsg }}</p>
+        <div v-show="cardShow">
           <p>KIM JIHEE</p>
           <div>
             <img src="" alt="">
@@ -51,6 +53,16 @@ export default {
     },
     hearts (){
       return this.$store.state.showOption.hearts
+    },
+    hMsg (){
+      if (this.$store.state.showOption.hearts.length > 7) {
+        return this.$store.state.showOption.hMsg
+      } return ' '
+    },
+    cardShow (){
+     if (this.$store.state.showOption.hearts.length > 7) {
+        return true
+      } return false
     }
   },
   methods: {

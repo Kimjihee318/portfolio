@@ -21,7 +21,8 @@ export const store = new Vuex.Store({
         { icon: 'favorite_border', checked: false },
         { icon: 'favorite', checked: true }
       ],
-      hearts: [true, false, false, false, false]
+      hearts: [true, false, false, false, false],
+      hMsg: 'You like my work!'
     },
     asideOption: {
       categories: [
@@ -50,8 +51,8 @@ export const store = new Vuex.Store({
           'd3': false, 
           'es6': true,
           'scss': true,
-          'less': true,
-          'pug': true,
+          'less': false,
+          'pug': false,
         }
      },
     {
@@ -62,10 +63,10 @@ export const store = new Vuex.Store({
       language: ['d3.js','pug','less','bootstrap'],
       color: '#6b90cf',
       style: {
-        'vue': true, 
-        'd3': false, 
+        'vue': false, 
+        'd3': true, 
         'es6': true,
-        'scss': true,
+        'scss': false,
         'less': true,
         'pug': true,
       }
@@ -78,11 +79,11 @@ export const store = new Vuex.Store({
       language: ['d3.js','pug','scss','bootstrap'],
       color: '#6b90cf',
       style: {
-        'vue': true, 
-        'd3': false, 
+        'vue': false, 
+        'd3': true, 
         'es6': true,
         'scss': true,
-        'less': true,
+        'less': false,
         'pug': true,
       }
     },
@@ -94,12 +95,12 @@ export const store = new Vuex.Store({
       language: ['d3.js'],
       color: '#6b90cf',
       style: {
-        'vue': true, 
-        'd3': false, 
+        'vue': false, 
+        'd3': true, 
         'es6': true,
-        'scss': true,
-        'less': true,
-        'pug': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
       }
     },
     {
@@ -110,12 +111,12 @@ export const store = new Vuex.Store({
       language: ['d3.js'],
       color: '#6b90cf',
       style: {
-        'vue': true, 
-        'd3': false, 
+        'vue': false, 
+        'd3': true, 
         'es6': true,
-        'scss': true,
-        'less': true,
-        'pug': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
       }
     },
      {
@@ -126,12 +127,12 @@ export const store = new Vuex.Store({
        language: ['d3.js'],
        color: '#6b90cf',
        style: {
-         'vue': true, 
-         'd3': false, 
-         'es6': true,
-         'scss': true,
-         'less': true,
-         'pug': true,
+        'vue': false, 
+        'd3': true, 
+        'es6': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
        }
      },
      {
@@ -142,12 +143,12 @@ export const store = new Vuex.Store({
        language: ['d3.js'],
        color: '#6b90cf',
        style: {
-         'vue': true, 
-         'd3': false, 
-         'es6': true,
-         'scss': true,
-         'less': true,
-         'pug': true,
+        'vue': false, 
+        'd3': true, 
+        'es6': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
        }
      },
      {
@@ -158,12 +159,12 @@ export const store = new Vuex.Store({
       language: ['d3.js'],
       color: '#6b90cf',
       style: {
-        'vue': true, 
-        'd3': false, 
+        'vue': false, 
+        'd3': true, 
         'es6': true,
-        'scss': true,
-        'less': true,
-        'pug': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
       }
     },
      {
@@ -174,12 +175,12 @@ export const store = new Vuex.Store({
        language: ['d3.js'],
        color: '#6b90cf',
        style: {
-         'vue': true, 
-         'd3': false, 
-         'es6': true,
-         'scss': true,
-         'less': true,
-         'pug': true,
+        'vue': false, 
+        'd3': true, 
+        'es6': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
        }
      },
      {
@@ -190,12 +191,12 @@ export const store = new Vuex.Store({
        language: ['d3.js'],
        color: '#6b90cf',
        style: {
-         'vue': true, 
-         'd3': false, 
-         'es6': true,
-         'scss': true,
-         'less': true,
-         'pug': true,
+        'vue': false, 
+        'd3': true, 
+        'es6': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
        }
      },
      {
@@ -206,12 +207,12 @@ export const store = new Vuex.Store({
        language: ['d3.js'],
        color: '#6b90cf',
        style: {
-         'vue': true, 
-         'd3': false, 
-         'es6': true,
-         'scss': true,
-         'less': true,
-         'pug': true,
+        'vue': false, 
+        'd3': true, 
+        'es6': true,
+        'scss': false,
+        'less': false,
+        'pug': false,
        }
      }
     ],
@@ -266,7 +267,7 @@ export const store = new Vuex.Store({
   },
   getters: {
     isVisible : function(state){
-      let fonts = state.fonts
+      let fonts = state.graphs
       let options = state.asideOption.categories
       function isVisible(options, font){
         for(let i =0; i<options.length; i++) {
@@ -298,9 +299,6 @@ export const store = new Vuex.Store({
         return state.showOption.hearts.push(true)
       }
       return false
-    },
-    changeHeart (state) {
-      // state.showOption.heartIcon.slice
     },
     clickCheck (state, payload){
       state.asideOption.categories[payload].checked = !state.asideOption.categories[payload].checked

@@ -1,7 +1,7 @@
 <template>
   <div id=component-wrapper>
     <div v-for="(item, index) in graphs" :key="index" 
-    v-show="true">
+    v-show="isVisible[index]">
       <i @click="clickFavorite" class="material-icons">{{ favorite }}</i>
       <h4>{{ item.name }}</h4>
       <graphBody :num="index" :proj="item"></graphBody>
@@ -29,9 +29,6 @@ export default {
     }
   },
   methods: {
-    changeHeart(){
-      this.$store.commit('changeHeart')
-    },
     clickFavorite(){
       this.$store.commit('clickFavorite');
     }
