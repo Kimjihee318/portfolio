@@ -1,22 +1,39 @@
 <template>
   <div id="aside-wrapper">
-    <ul id="categories">
-      <div id="User">
-        <!-- <img id="wlgml" src="../assets/IMG_0025.jpg" alt="jiheemoji" width="200px"> -->
-        <button>pause</button>
-      </div>
-      <ul id="heart-box">
-        <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
-          <i @click="clickFavorite" class="material-icons">favorite</i>
+    <div id="aside-header"></div>
+    <div id="aside-body">
+      <ul id="categories">
+        <p>Categories</p>
+        <li v-for="(items, index) in categories" :key="index" >
+          <input @click="clickCheck(index)" :id="index" type="checkbox" :checked="items.checked">
+          <label :for="index"><span></span></label>
+          <label>{{ items.name }}</label>
         </li>
       </ul>
-      <h4>Categories</h4>
-      <li v-for="(items, index) in categories" :key="index" >
-        <input @click="clickCheck(index)" :id="index" type="checkbox" :checked="items.checked">
-        <label :for="index"><span></span></label>
-        <label>{{ items.name }}</label>
-      </li>
-    </ul>
+      <div class="contact">
+        <!-- <label for="star-box">Smile</label>
+        <ul id="star-box">
+          <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
+            <i @click="clickFavorite" class="material-icons">star</i>
+          </li>
+        </ul> -->
+        <label for="heart-box">Like</label>
+        <ul id="heart-box">
+          <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
+            <i @click="clickFavorite" class="material-icons">favorite</i>
+          </li>
+        </ul>
+        <p>You like my works!</p>
+        <div>
+          <p>KIM JIHEE</p>
+          <div>
+            <img src="" alt="">
+            <p>Developer & Designer</p>
+            <p>jiheekim318@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

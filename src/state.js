@@ -10,20 +10,27 @@ export const store = new Vuex.Store({
       defaultIndex: [0,1,2,3,4],
       payloadIndex: [],
       colors: [
-        {color: 'white'},
-        {color: '#4feaff'}, 
-        {color: '#ffff48'},
-        {color: '#57caff'}
+        {color: '#fff'},
+        {color: '#fffae6'}, 
+        {color: '#3f494f'},
+        {color: '#95bcff'}
       ],
-      colorIn: 'white',
-      hearts: [true, true, false, false, false]
+      // this is background-color
+      colorIn: '#fff',
+      heartIcon: [
+        { icon: 'favorite_border', checked: false },
+        { icon: 'favorite', checked: true }
+      ],
+      hearts: [true, false, false, false, false]
     },
     asideOption: {
       categories: [
-        {name: 'VUE', checked: true},
-        {name: 'D3', checked: true},
-        {name: 'SCSS', checked: true},
-        {name: 'STUDY', checked: true},
+        {name: 'vue', checked: true},
+        {name: 'd3', checked: true},
+        {name: 'es6', checked: true},
+        {name: 'scss', checked: true},
+        {name: 'less', checked: true},
+        {name: 'pug', checked: true},
       ],
       colorsorting: [
         ,'popular','dateAdded'
@@ -31,59 +38,182 @@ export const store = new Vuex.Store({
     },
     graphs: [
      {
-       name: 'vue-googlefont',
+       name: 'Vue-googlefont',
        link: 'https://kimjihee318.github.io/vue-googlefont/#/',
-       img: './assets/suicide.png',
-       language: ['vue, scss']
+       img: '~@/assets/IMG_0025.jpg',
+       imgLink: 'https://user-images.githubusercontent.com/26508791/53215805-8cb1cb80-3695-11e9-98c8-11059f3d1b69.png ',
+       language: ['vue.js','vuex','es6','scss'],
+       color: '#6b90cf'
+       ,
+        style: {
+          'vue': true, 
+          'd3': false, 
+          'es6': true,
+          'scss': true,
+          'less': true,
+          'pug': true,
+        }
      },
+    {
+      name: 'Billing dashboard',
+      link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53301463-89d1f900-3896-11e9-8082-61e367cad008.jpg',
+      language: ['d3.js','pug','less','bootstrap'],
+      color: '#6b90cf',
+      style: {
+        'vue': true, 
+        'd3': false, 
+        'es6': true,
+        'scss': true,
+        'less': true,
+        'pug': true,
+      }
+    },
+    {
+      name: 'Dashboard',
+      link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53301461-850d4500-3896-11e9-8fd6-37b869d7104c.png',
+      language: ['d3.js','pug','scss','bootstrap'],
+      color: '#6b90cf',
+      style: {
+        'vue': true, 
+        'd3': false, 
+        'es6': true,
+        'scss': true,
+        'less': true,
+        'pug': true,
+      }
+    },
+    {
+      name: 'D3 animation',
+      link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53301445-67d87680-3896-11e9-860c-a57d3c83a6eb.png',
+      language: ['d3.js'],
+      color: '#6b90cf',
+      style: {
+        'vue': true, 
+        'd3': false, 
+        'es6': true,
+        'scss': true,
+        'less': true,
+        'pug': true,
+      }
+    },
+    {
+      name: 'CO2 Emission',
+      link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/co2_crop2.png?raw=true',
+      language: ['d3.js'],
+      color: '#6b90cf',
+      style: {
+        'vue': true, 
+        'd3': false, 
+        'es6': true,
+        'scss': true,
+        'less': true,
+        'pug': true,
+      }
+    },
      {
-       name: '세계 Co2 배출량',
+       name: 'Air pollution',
        link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
-       img: './assets/suicide.png',
-       language: ['d3']
+       img: '~@/assets/IMG_0025.jpg',
+       imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/subway_air.png?raw=true',
+       language: ['d3.js'],
+       color: '#6b90cf',
+       style: {
+         'vue': true, 
+         'd3': false, 
+         'es6': true,
+         'scss': true,
+         'less': true,
+         'pug': true,
+       }
      },
      {
-       name: '세계 Co2 배출량',
-       link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
-       img: './assets/suicide.png',
-       language: ['d3']
-     },
-     {
-       name: '지하철 공기질',
-       link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
-       img: './assets/suicide.png',
-       language: ['d3']
-     },
-     {
-       name: '지하철 노선별 인구',
+       name: 'Subway People',
        link: 'https://kimjihee318.github.io/subway.html',
-       img: './assets/suicide.png',
-       language: ['d3']
+       img: '~@/assets/IMG_0025.jpg',
+       imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/subwayProject.png?raw=true',
+       language: ['d3.js'],
+       color: '#6b90cf',
+       style: {
+         'vue': true, 
+         'd3': false, 
+         'es6': true,
+         'scss': true,
+         'less': true,
+         'pug': true,
+       }
      },
      {
-       name: '빅맥 지수',
-       link: 'https://kimjihee318.github.io/bigMac_index.html',
-       img: './assets/suicide.png',
-       language: ['d3']
-     },
+      name: 'Bigmac index',
+      link: 'https://kimjihee318.github.io/bigMac_index.html',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/bigMac_datavis.png?raw=true',
+      language: ['d3.js'],
+      color: '#6b90cf',
+      style: {
+        'vue': true, 
+        'd3': false, 
+        'es6': true,
+        'scss': true,
+        'less': true,
+        'pug': true,
+      }
+    },
      {
-       name: '세계 자살률 추이',
+       name: 'Rate of suicide',
        link: 'https://kimjihee318.github.io/suicide_smallMultiples.html',
-       img: './assets/suicide.png',
-       language: ['d3']
+       img: '~@/assets/IMG_0025.jpg',
+       imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/suicide.png?raw=true',
+       language: ['d3.js'],
+       color: '#6b90cf',
+       style: {
+         'vue': true, 
+         'd3': false, 
+         'es6': true,
+         'scss': true,
+         'less': true,
+         'pug': true,
+       }
      },
      {
        name: '세계 Co2 배출량',
        link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
-       img: './assets/suicide.png',
-       language: ['d3']
+       img: '~@/assets/IMG_0025.jpg',
+       imgLink: '../../../assets/IMG_0025.jpg',
+       language: ['d3.js'],
+       color: '#6b90cf',
+       style: {
+         'vue': true, 
+         'd3': false, 
+         'es6': true,
+         'scss': true,
+         'less': true,
+         'pug': true,
+       }
      },
      {
        name: '세계 Co2 배출량',
        link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
-       img: './assets/suicide.png',
-       language: ['d3']
-     },
+       img: '~@/assets/suicide.png',
+       imgLink: '../../../assets/IMG_0025.jpg',
+       language: ['d3.js'],
+       color: '#6b90cf',
+       style: {
+         'vue': true, 
+         'd3': false, 
+         'es6': true,
+         'scss': true,
+         'less': true,
+         'pug': true,
+       }
+     }
     ],
     fonts: [
       { 
@@ -164,10 +294,13 @@ export const store = new Vuex.Store({
       state.showOption.show = !state.showOption.show
     },
     clickFavorite (state) {
-      if (state.showOption.hearts.length<13){
+      if (state.showOption.hearts.length<10){
         return state.showOption.hearts.push(true)
       }
       return false
+    },
+    changeHeart (state) {
+      // state.showOption.heartIcon.slice
     },
     clickCheck (state, payload){
       state.asideOption.categories[payload].checked = !state.asideOption.categories[payload].checked

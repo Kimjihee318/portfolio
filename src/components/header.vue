@@ -2,10 +2,9 @@
   <div id="header">
     <h2>JIHEE'S LAB</h2>
     <ul>
-      <li></li>
-      <li></li>
-      <li><i class="material-icons">format_color_fill</i>
-      </li>
+      <li>About Jihee</li>
+      <li>Portfolio</li>
+      <li>경력기술서</li>
        <ul class="color-pick">
          <li v-for="(color, index) in colors" :key="index" @click="getCol(color)">
            <div class="color-circle" :style="{'background-color':color.color}"></div>
@@ -20,7 +19,7 @@ export default {
   computed: {
     colors (){
       return this.$store.state.showOption.colors
-    },
+    } 
   },
   methods: {
     getCol (color){

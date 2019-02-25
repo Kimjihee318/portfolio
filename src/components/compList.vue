@@ -1,5 +1,5 @@
 <template>
-  <div id="comps">
+  <div id="comps" :style="{'backgroundColor': colorIn}">
     <p>Viewing {{ this.fontsNum }} of {{ this.allfontsNum }} Projects </p>
     <graph></graph>
   </div>
@@ -20,15 +20,18 @@ export default {
     fontsNum (){
       let filtered = this.$store.getters.isVisible.filter(font => font == true)
       return filtered.length
+    },
+     colorIn (){
+      return this.$store.state.showOption.colorIn
     }
   }
 }
 </script>
 <style>
   #comps>p {
-    padding-left: 1rem;
+    padding-left: 2rem;
     margin-bottom: 0;
-    font-weight: 400;
-    color: #bbb;
+    font-weight: 300;
+    color: #aaa;
   }
 </style>

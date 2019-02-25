@@ -12,13 +12,14 @@
   right: $aside-width;
 }
 #aside-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: $aside-width;
   height: 100%;
-  padding-left: 1.8rem;
-  background-color: #fff;
+  border-left: 1px solid $body-border;
+  font-weight: 400;
+  // background-color: $aside-color;
 }
 #header {
   position: fixed;
@@ -27,9 +28,9 @@
   right: $aside-width;
   z-index: 2000;
   height: 60px;
-  border-bottom: $border;
-  background-color: #fff;
   line-height: 60px;
+  background-color: $header-back;
+  border-bottom: 1px solid $body-border;
   > * {
     float: left;
   }
@@ -44,9 +45,8 @@
     display: flex;
     position: absolute;
     right: 0;
-    width: $aside-width;
+    width: 350px;
     height: inherit;
-    border-right: $border;
     li {
       flex-direction: row;
       justify-content: space-between;

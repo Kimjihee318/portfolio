@@ -1,14 +1,15 @@
 <template>
   <div id="graphBody">
-    <div>
-      <img src="image" alt="images" width="100%">
-      <ul v-for="(item, index) in language" :key="index">
-       <li>{{ item }}</li>
-      </ul>
+    <div >
+      <a :href="link">
+        <img :src="imageLink" alt="images" width="100%" :style="{fill:fillcolor}">
+      </a>
     </div>
+    <ul v-for="(item, index) in language" :key="index">
+      <li :class="item">{{ item }}</li>
+    </ul>
   </div>
 </template>
-
 <script>
 export default {
   props: {
@@ -18,11 +19,17 @@ export default {
     }
   },
   computed: {
+    link (){
+      return this.proj.link
+    },
+    fillcolor (){
+      return this.proj.color
+    },
     language (){
       return this.proj.language
     },
-    image (){
-      return this.proj.img
+    imageLink(){
+      return this.proj.imgLink
     }
   }
 }
@@ -31,25 +38,34 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/setup/variables.scss";
 
-  #graphBody > div {
-    width: 90%;
+  #graphBody {
+    width: 94%;
     height: 200px;
-    margin: 0 auto;
+  // margin: 0 auto;
+  }
+  #graphBody + div {
+    height: 100px;
   }
   img {
-    border: $border;
+    border: 1px solid $body-border-opacity;
+    border-radius: 4px;
   }
-  ul > li {
-    float: left;
-    padding: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-right: 5px;
-    font-size: .9rem;
-    border-radius: 2px;
-    text-transform: uppercase;
+  ul {
+    margin-top: 5px;
+    li {
+      float: left;
+      padding: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-right: 5px;
+      font-size: .9rem;
+      border-radius: 2px;
+      text-transform: uppercase;
+      border: 1px solid $body-border;
+      color: $font-color;
+    }
   }
   .vue {
-
+    background-color: #00bbd475;
   }
 </style>

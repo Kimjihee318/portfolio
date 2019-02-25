@@ -7,20 +7,19 @@
 #component-wrapper {
   display: flex;
   flex-flow: wrap;
-  align-content:flex-start;
+  align-content: space-around;
   padding-top: 1rem;
   & > div {
     padding: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 3rem;
-    width: 40%;
+    width: 47%;
     margin-left: 1.5%;
     margin-right: 1.5%;
     position: relative;
   }
 }
 .material-icons {
-  color: $point-color;
   position: absolute;
   right: 1rem;
   top: 1.65rem;
