@@ -3,6 +3,7 @@
 #aside-wrapper {
   font-size: 1.1rem;
   font-weight: 300;
+  background-color: $sub-back;
   #aside-header {
     width: 100%;
     height: 60px;
@@ -18,9 +19,6 @@
     margin-bottom: 1rem;
     color:#555;
     font-weight: 400;
-  }
-  #wlgml {
-    clip-path: circle(150px at center);
   }
   .contact label {
     margin-bottom: 10px;
@@ -43,12 +41,9 @@
       }
     }
   }
- #star-box {
-    li {
-      color: $star-color;
-    }
-  }
   #heart-box {
+    padding-top: 10px;
+    padding-bottom: 5px;
     li {
       color: $heart-color;
     }
@@ -58,11 +53,23 @@
     bottom: 1rem;
     font-size: 1rem;
     line-height: 1rem;
-    >div {
+    #card {
       border: 1px solid $body-border;
       width: 13rem;
       height: 15rem;
       padding: 1rem;
+      margin: 0 auto;
+      #face-img {
+        position: relative;
+        left: 5px;
+        top: 13px;
+        clip-path: circle(120px at center);
+      }
+      >p {
+        position: relative;
+        top: -15px;
+        font-weight: 500;
+      }
       div {
         position: absolute;
         bottom: 0;

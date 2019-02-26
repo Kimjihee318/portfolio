@@ -22,7 +22,21 @@ export default {
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    // outline: $border
+    a:link {
+    color:#000;
+    text-decoration: none;
+    }
+    a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+    a img {
+        border: 0;
+    }
   }
   html {
     background-color: $sub-back;

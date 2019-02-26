@@ -13,12 +13,6 @@
         </li>
       </ul>
       <div class="contact">
-        <!-- <label for="star-box">Smile</label>
-        <ul id="star-box">
-          <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
-            <i @click="clickFavorite" class="material-icons">star</i>
-          </li>
-        </ul> -->
         <label for="heart-box">Like</label>
         <ul id="heart-box">
           <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
@@ -26,10 +20,10 @@
           </li>
         </ul>
         <p>{{ hMsg }}</p>
-        <div v-show="cardShow">
+        <div id="card" v-show="cardShow">
           <p>KIM JIHEE</p>
           <div>
-            <img src="" alt="">
+            <img id="face-img" src="../assets/IMG_0025.jpg" alt="지희 짱" width="170px">
             <p>Developer & Designer</p>
             <p>jiheekim318@gmail.com</p>
           </div>

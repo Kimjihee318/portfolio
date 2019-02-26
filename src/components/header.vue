@@ -1,10 +1,10 @@
 <template>
   <div id="header">
     <h2>JIHEE'S LAB</h2>
-    <ul>
-      <li>About Jihee</li>
-      <li>Portfolio</li>
-      <li>경력기술서</li>
+    <ul id="menu">
+      <a href=""><li>About Jihee</li></a>
+      <a href=""><li>Portfolio</li></a>
+      <a href=""><li>경력기술서</li></a>
        <ul class="color-pick">
          <li v-for="(color, index) in colors" :key="index" @click="getCol(color)">
            <div class="color-circle" :style="{'background-color':color.color}"></div>

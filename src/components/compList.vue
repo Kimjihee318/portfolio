@@ -1,6 +1,6 @@
 <template>
   <div id="comps" :style="{'backgroundColor': colorIn}">
-    <p>Viewing {{ this.fontsNum }} of {{ this.allfontsNum }} Projects </p>
+    <!-- <p>Viewing {{ this.fontsNum }} of {{ this.allfontsNum }} Projects </p> -->
     <graph></graph>
   </div>
 </template>

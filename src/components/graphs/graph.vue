@@ -37,7 +37,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   @import "../../styles/setup/variables.scss";
-  @import "../../styles/views/component.scss";
+  @import "../../styles/views/card.scss";
 
   #component-wrapper>div{
     position: relative;
