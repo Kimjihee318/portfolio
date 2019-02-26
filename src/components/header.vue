@@ -5,7 +5,6 @@
       <div class="menu-icon"><i class="material-icons ">menu</i></div>
       <a href=""><li>About Jihee</li></a>
       <a href=""><li>Portfolio</li></a>
-      <a href=""><li>경력기술서</li></a>
        <ul class="color-pick">
          <li v-for="(color, index) in colors" :key="index" @click="getCol(color)" class="colors">
            <div class="color-circle" :style="{'background-color':color.color}"></div>

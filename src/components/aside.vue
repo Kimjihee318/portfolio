@@ -1,6 +1,7 @@
 <template>
   <div id="aside-wrapper">
     <div id="aside-header">
+      <p style="margin:0; padding:0; font-size: 1.5rem; text-align:center; line-height:60px;">👍🏻&nbsp;👉🏻&nbsp;💙&nbsp;👉🏻&nbsp;👀 👩🏻‍💻</p>
     </div>
     <div id="aside-body">
       <ul id="categories">
@@ -11,17 +12,18 @@
           <label>{{ items.name }}</label>
         </li>
       </ul>
+      <p>Viewing <span>{{ this.fontsNum }}</span> of {{ this.allfontsNum }} Projects</p>
       <div class="contact">
         <label for="heart-box">Likes</label>
         <ul id="heart-box">
           <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
-            <i @click="clickFavorite" class="material-icons">favorite</i>
+            <i class="material-icons">💙</i>
           </li>
         </ul>
-        <div id="card" v-show="cardShow">
+        <div id="card">
           <p>KIM JIHEE</p>
           <div>
-            <img id="face-img" src="../assets/IMG_0025.jpg" alt="지희 짱" width="170px">
+            <img id="face-img" v-show="cardShow" src="../assets/IMG_0025.jpg" alt="지희 짱" width="170px">
             <p>Developer & Designer</p>
             <p>jiheekim318@gmail.com</p>
           </div>
@@ -37,25 +39,26 @@ export default {
     categories (){
       return this.$store.state.asideOption.categories
     },
-    sorting (){
-      return this.$store.state.asideOption.sorting
+    allfontsNum (){
+      return this.$store.state.graphs.length
     },
-    language (){
-      return this.$store.state.asideOption.language
+    fontsNum (){
+      let filtered = this.$store.getters.isVisible.filter(font => font == true)
+      return filtered.length
     },
     hearts (){
       return this.$store.state.showOption.hearts
     },
     cardShow (){
-     return true
+     if (this.$store.state.showOption.hearts.length>5){
+        return true
+      }
+      return false
     }
   },
   methods: {
     clickCheck (index) {
       this.$store.commit('clickCheck', index);
-    },
-    clickFavorite () {
-      this.$store.commit('clickFavorite');
     }
   }
 }
@@ -79,5 +82,20 @@ input[type=range]::-moz-range-thumb {
 }
 select {
   border-bottom: $border;
+}
+p:not(#card>p) {
+  font-size: 90%;
+  color: #777;
+  &:nth-child(2){
+    padding-bottom: 10px;
+    // border-bottom: 1px solid $body-border;
+  }
+  span {
+    padding-right: 3px; 
+    padding-left: 3px;
+    color: $point-color;
+    font-weight: 800;
+    font-size: 110%;
+  }
 }
 </style>

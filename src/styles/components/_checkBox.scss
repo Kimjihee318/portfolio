@@ -5,7 +5,7 @@ input[type=checkbox] {
 }
 // 바로 뒤에 있는 레벨 셀렉터
 input[type=checkbox] + label {
-  border: 1px solid $body-border;
+  border: 2px solid $body-border;
   border-radius: 2px;
   display: inline-block;
   height: 1rem;
@@ -13,7 +13,6 @@ input[type=checkbox] + label {
 }
 input[type=checkbox]:checked + label {
   background-color: $point-opacity;
-  margin-right: 3px;
 }
 input[type=checkbox]:checked + label span {
   display: inline-block;
@@ -24,7 +23,7 @@ input[type=checkbox]:checked + label span {
 label:last-child {
   line-height: 1.9rem;
   position: relative;
-  top: -0.45rem;
+  top: -8px;
   left: 2px;
   font-size: 90%;
   text-transform: uppercase;

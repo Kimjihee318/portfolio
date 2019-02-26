@@ -17,9 +17,9 @@
     padding: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 3rem;
-    width: 46%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: 31%;
+    margin-left: 1%;
+    margin-right: 1%;
     position: relative;
   }
 }
@@ -27,9 +27,6 @@
   position: absolute;
   right: 1rem;
   top: 1.65rem;
-  &:hover {
-    color: $heart-color;
-  }
 }
 .serif {
   display: none;
@@ -40,12 +37,16 @@ p {
   font-size: 0.9rem;
   color: #aaa;
 }
-// graph body style
-#graphBody {
+// card body style
+#cardBody {
   width: 94%;
-  height: 310px;
+  height: 250px;
+  >div {
+    height: 200px;
+    background-color: #edf5ff;
+    border: 2px solid $body-border-opacity;
+  }
   img {
-  border: 1px solid $body-border-opacity;
   border-radius: 4px;
   }
   ul {
@@ -64,25 +65,9 @@ p {
       color: $font-color;
     }
   }
- 
 }
-#graphBody + div {
+#cardBody + div {
   height: 100px;
-}
-#component-wrapper>div{
-  position: relative;
-}
-h4 {
-  color: $font-color;
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.9;
-}
-.material-icons {
-  color: $heart-color;
-  position: absolute;
-  bottom: -5px;
-  right: 44px;
 }
 // media query
 @include media-breakpoint-down (sm) {
