@@ -10,7 +10,6 @@ input[type=checkbox] + label {
   display: inline-block;
   height: 1rem;
   width: 1rem;
-  margin-left: 0.5rem;
 }
 input[type=checkbox]:checked + label {
   background-color: $point-opacity;
@@ -23,9 +22,10 @@ input[type=checkbox]:checked + label span {
 }
 // 두번째 셀렉터
 label:last-child {
-  line-height: 1.8rem;
-  padding-left: 0.1rem;
+  line-height: 1.9rem;
   position: relative;
-  top: -0.4rem;
+  top: -0.45rem;
+  left: 2px;
   font-size: 90%;
+  text-transform: uppercase;
 }

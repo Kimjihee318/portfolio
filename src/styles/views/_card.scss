@@ -1,0 +1,108 @@
+@import '../setup/variables';
+
+// media query vendors
+@import "../bootstrap/variables.scss";
+@import "../bootstrap/breakpoints.scss";
+@import "../bootstrap/functions.scss";
+// standard
+* {
+  // border: 1px solid #ddd;
+}
+#component-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  padding-top: 1rem;
+  & > div {
+    padding: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 3rem;
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+    position: relative;
+  }
+}
+.material-icons {
+  position: absolute;
+  right: 1rem;
+  top: 1.65rem;
+  &:hover {
+    color: $heart-color;
+  }
+}
+.serif {
+  display: none;
+}
+p {
+  position: relative;
+  top: -1.3rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+// graph body style
+#graphBody {
+  width: 94%;
+  height: 310px;
+  img {
+  border: 1px solid $body-border-opacity;
+  border-radius: 4px;
+  }
+  ul {
+    margin-top: 5px;
+    li {
+      float: left;
+      padding: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-right: 5px;
+      font-size: .9rem;
+      border-radius: 2px;
+      text-transform: uppercase;
+      border: 1px solid $body-border;
+      // background-color: $button-opacity;
+      color: $font-color;
+    }
+  }
+ 
+}
+#graphBody + div {
+  height: 100px;
+}
+#component-wrapper>div{
+  position: relative;
+}
+h4 {
+  color: $font-color;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+.material-icons {
+  color: $heart-color;
+  position: absolute;
+  bottom: -5px;
+  right: 44px;
+}
+// media query
+@include media-breakpoint-down (sm) {
+  // mobile
+  #component-wrapper {
+    display: block;
+    & > div {
+      min-width: 100%;
+    }
+  }
+}
+@include media-breakpoint-between (sm, lg) {
+  // ipad
+  #component-wrapper > div {
+    min-width: 45%;
+  }
+}
+@include media-breakpoint-between (lg, xl) {
+  // macbook
+  #component-wrapper > div {
+    // min-width: 30.33333333333%;
+  }
+}

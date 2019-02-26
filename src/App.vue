@@ -23,15 +23,15 @@ export default {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     a:link {
-    color:#000;
+    color: $link-color;
     text-decoration: none;
     }
     a:visited {
-        color: #000;
+        color: $link-color;
         text-decoration: none;
     }
     a:hover {
-        color: #000;
+        color: $link-color;
         text-decoration: none;
     }
     a img {

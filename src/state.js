@@ -39,21 +39,21 @@ export const store = new Vuex.Store({
     },
     graphs: [
      {
-       name: 'Vue-googlefont',
-       link: 'https://kimjihee318.github.io/vue-googlefont/#/',
-       img: '~@/assets/IMG_0025.jpg',
-       imgLink: 'https://user-images.githubusercontent.com/26508791/53215805-8cb1cb80-3695-11e9-98c8-11059f3d1b69.png ',
-       language: ['vue.js','vuex','es6','scss'],
-       color: '#6b90cf'
-       ,
-        style: {
-          'vue': true, 
-          'd3': false, 
-          'es6': true,
-          'scss': true,
-          'less': false,
-          'pug': false,
-        }
+      name: 'Vue-googlefont',
+      link: 'https://kimjihee318.github.io/vue-googlefont/#/',
+      img: '~@/assets/IMG_0025.jpg',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53215805-8cb1cb80-3695-11e9-98c8-11059f3d1b69.png ',
+      language: ['vue.js','vuex','es6','scss'],
+      color: '#6b90cf',
+      style: {
+      'vue': true, 
+      'd3': false, 
+      'es6': true,
+      'scss': true,
+      'less': false,
+      'pug': false,
+      },
+      show: true
      },
     {
       name: 'Billing dashboard',
@@ -69,7 +69,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': true,
         'pug': true,
-      }
+      },
+      show: true
     },
     {
       name: 'Dashboard',
@@ -85,7 +86,8 @@ export const store = new Vuex.Store({
         'scss': true,
         'less': false,
         'pug': true,
-      }
+      },
+      show: true
     },
     {
       name: 'D3 animation',
@@ -101,7 +103,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-      }
+      },
+      show: true
     },
     {
       name: 'CO2 Emission',
@@ -117,7 +120,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-      }
+      },
+      show: true
     },
      {
        name: 'Air pollution',
@@ -133,7 +137,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-       }
+       },
+       show: true
      },
      {
        name: 'Subway People',
@@ -165,7 +170,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-      }
+      },
+      show: true
     },
      {
        name: 'Rate of suicide',
@@ -181,7 +187,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-       }
+       },
+       show: true
      },
      {
        name: '세계 Co2 배출량',
@@ -197,7 +204,8 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-       }
+       },
+       show: true
      },
      {
        name: '세계 Co2 배출량',
@@ -213,44 +221,11 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-       }
+       },
+       show: true
      }
     ],
-    fonts: [
-      { 
-        information: {
-          name: 'Kimjihee',
-          sorting: 100,
-          language: ['english','korean'],
-          defaultOptions: {
-            text: 'DESIGNER',
-            fontSize: 40,
-            fontWeight: '400',
-            fontFamily: 'Lobster',
-            show: true,
-          },
-          stringArr: [
-            {val: 'Tool', content: 'DESIGNER'},
-            {val: 'Sketch', content: 'Good'},
-            {val: 'Illustrator', content: 'Good'},
-            {val: 'Indesign', content: 'Good'},
-            {val: 'photoshop', content: '123456789'}
-          ],
-          weightArr: [
-            {val: 'light', content: '300'},
-            {val: 'regular', content: '400'},
-            {val: 'medium', content: '500'},
-            {val: 'bold', content: '600'}
-          ]
-        },
-        style: {
-          'Vue': true, 
-          'D3': false, 
-          'SCSS': true,
-          'STUDY': true,
-        }
-      }
-    ],
+    
     // 작업
     project: [
       {
@@ -291,11 +266,11 @@ export const store = new Vuex.Store({
     colorVmodel (state, color) {
       state.showOption.colorIn = color.color
     },
-    clickPlus (state) {
-      state.showOption.show = !state.showOption.show
+    clickPlus (state, payload) {
+      state.graphs[payload].show = !state.graphs[payload].show
     },
     clickFavorite (state) {
-      if (state.showOption.hearts.length<10){
+      if (state.showOption.hearts.length<12){
         return state.showOption.hearts.push(true)
       }
       return false

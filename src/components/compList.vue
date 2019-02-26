@@ -1,6 +1,6 @@
 <template>
   <div id="comps" :style="{'backgroundColor': colorIn}">
-    <!-- <p>Viewing {{ this.fontsNum }} of {{ this.allfontsNum }} Projects </p> -->
+    <p>Viewing {{ this.fontsNum }} of {{ this.allfontsNum }} Projects </p>
     <graph></graph>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     allfontsNum (){
-      return this.$store.state.fonts.length
+      return this.$store.state.graphs.length
     },
     fontsNum (){
       let filtered = this.$store.getters.isVisible.filter(font => font == true)

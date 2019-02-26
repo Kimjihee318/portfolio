@@ -1,11 +1,10 @@
 <template>
   <div id="aside-wrapper">
     <div id="aside-header">
-      <i @click="clickFavorite" class="material-icons">favorite</i>를 클릭 해보세요!
     </div>
     <div id="aside-body">
       <ul id="categories">
-        <p>Categories</p>
+        <p>Language</p>
         <li v-for="(items, index) in categories" :key="index" >
           <input @click="clickCheck(index)" :id="index" type="checkbox" :checked="items.checked">
           <label :for="index"><span></span></label>
@@ -13,13 +12,12 @@
         </li>
       </ul>
       <div class="contact">
-        <label for="heart-box">Like</label>
+        <label for="heart-box">Likes</label>
         <ul id="heart-box">
           <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
             <i @click="clickFavorite" class="material-icons">favorite</i>
           </li>
         </ul>
-        <p>{{ hMsg }}</p>
         <div id="card" v-show="cardShow">
           <p>KIM JIHEE</p>
           <div>
@@ -48,15 +46,8 @@ export default {
     hearts (){
       return this.$store.state.showOption.hearts
     },
-    hMsg (){
-      if (this.$store.state.showOption.hearts.length > 7) {
-        return this.$store.state.showOption.hMsg
-      } return ' '
-    },
     cardShow (){
-     if (this.$store.state.showOption.hearts.length > 7) {
-        return true
-      } return false
+     return true
     }
   },
   methods: {

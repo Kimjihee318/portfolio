@@ -46,10 +46,35 @@
   }
   h2 {
     margin: 0;
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-weight: 400;
     color: $point-color;
     background-color: transparent !important;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+.color-pick {
+  width: 70px;
+  height: 60px;
+  border-left: 1px solid $body-border;
+  // margin-right: 5px;
+  // padding-left: 2px;
+  li {
+    float: left;
+    width: 50%;
+    height: 50%;
+  }
+}
+.color-circle {
+  margin: 0 auto;
+  margin-top: 2px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  &:last-child {
+    border: 1px solid $body-border;
   }
 }
 @include media-breakpoint-down (sm) {
@@ -63,17 +88,26 @@
     #menu {
       display: block;
       width: 100%;
-      li {
+      margin-top: 60px;
+      border-bottom: 1px solid $body-border;
+      li:not(.colors){
         font-weight: 400;
         padding-left: 1rem;
         font-size: 1.2rem;
+        background-color: $sub-back;
+        height: 3rem;
+      }
+      .menu-icon {
+        position: absolute;
+        top: -55px;
+        right: 85px;
       }
     }
     // ------------------------------- this is color picker --------------------------------
     .color-pick {
       position: absolute;
-      top: 0;
-      right: 10px;
+      top: -60px;
+      right: 5px;
       .color-circle:hover {
         border: 3px solid $point-color;
       }
@@ -103,6 +137,9 @@
         justify-content: space-between;
         flex-grow: 1;
       }
+      .menu-icon {
+        display: none;
+      }
     }
   }
   #comps {
@@ -127,6 +164,9 @@
         flex-direction: row;
         justify-content: space-between;
         flex-grow: 1;
+      }
+      .menu-icon {
+        display: none;
       }
     }
   }
