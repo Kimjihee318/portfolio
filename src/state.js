@@ -130,7 +130,7 @@ export const store = new Vuex.Store({
     },
      {
        name: 'Air pollution',
-       link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+       link: 'https://kimjihee318.github.io/subway_air.html',
        img: '~@/assets/IMG_0025.jpg',
        imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/subway_air.png?raw=true',
        language: ['d3.js'],

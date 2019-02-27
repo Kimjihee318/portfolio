@@ -9,7 +9,7 @@
     <ul v-for="(item, index) in language" :key="index">
       <li :class="item">{{ item }}</li>
     </ul>
-    <div style="position:absolute; right:-10px; top: 145px; border-radius: 50%;"><i class="material-icons" style="color: #ffcc00; font-size: 1rem;" v-show="graphs[num].myPick">pan_tool</i></div>
+    <div style="position:absolute; right:-10px; top: 145px; border-radius: 50%;"><i class="material-icons" style="color: #ffcc00; font-size: 1.3rem;" v-show="graphs[num].myPick">pan_tool</i></div>
   </div>
 </template>
 <script>

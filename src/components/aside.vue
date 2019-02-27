@@ -49,7 +49,7 @@ export default {
       return this.$store.state.showOption.hearts
     },
     cardShow (){
-     if (this.$store.state.showOption.hearts.length>5){
+     if (this.$store.state.showOption.hearts.length>2){
         return true
       }
       return false
