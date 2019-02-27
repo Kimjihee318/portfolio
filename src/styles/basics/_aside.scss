@@ -46,16 +46,17 @@
   }
   #heart-box {
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     li {
       color: $heart-color;
+      font-size: 1.4rem;
     }
   }
   .contact {
     position: absolute;
     bottom: 1rem;
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 0.5rem;
     #card {
       border: 1px solid $body-border;
       width: 13rem;
@@ -68,7 +69,7 @@
         top: 13px;
         clip-path: circle(120px at center);
       }
-      >p {
+      > p {
         position: relative;
         top: -15px;
         font-weight: 500;

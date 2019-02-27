@@ -53,7 +53,8 @@ export const store = new Vuex.Store({
       'less': false,
       'pug': false,
       },
-      show: true
+      show: true,
+      myPick: true,
      },
     {
       name: 'Billing dashboard',
@@ -70,7 +71,8 @@ export const store = new Vuex.Store({
         'less': true,
         'pug': true,
       },
-      show: true
+      show: true,
+      myPick: true,
     },
     {
       name: 'Dashboard',
@@ -87,11 +89,12 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': true,
       },
-      show: true
+      show: true,
+      myPick: false,
     },
     {
       name: 'D3 animation',
-      link: 'https://kimjihee318.github.io/Co2Emission_v4.html',
+      link: 'https://kimjihee318.github.io/d3_animation/index.html',
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53301445-67d87680-3896-11e9-860c-a57d3c83a6eb.png',
       language: ['d3.js'],
@@ -104,7 +107,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
       },
-      show: true
+      show: true,
+      myPick: true,
     },
     {
       name: 'CO2 Emission',
@@ -121,7 +125,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
       },
-      show: true
+      show: true,
+      myPick: false,
     },
      {
        name: 'Air pollution',
@@ -138,7 +143,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
        },
-       show: true
+       show: true,
+       myPick: false,
      },
      {
        name: 'Subway People',
@@ -154,7 +160,9 @@ export const store = new Vuex.Store({
         'scss': false,
         'less': false,
         'pug': false,
-       }
+       },
+       show: true,
+       myPick: false,
      },
      {
       name: 'Bigmac index',
@@ -171,7 +179,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
       },
-      show: true
+      show: true,
+      myPick: false,
     },
      {
        name: 'Rate of suicide',
@@ -188,7 +197,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
        },
-       show: true
+       show: true,
+       myPick: false,
      },
      {
        name: '세계 Co2 배출량',
@@ -205,7 +215,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
        },
-       show: true
+       show: true,
+       myPick: false,
      },
      {
        name: '세계 Co2 배출량',
@@ -222,7 +233,8 @@ export const store = new Vuex.Store({
         'less': false,
         'pug': false,
        },
-       show: true
+       show: true,
+       myPick: false,
      }
     ],
     
@@ -277,6 +289,9 @@ export const store = new Vuex.Store({
     },
     clickCheck (state, payload){
       state.asideOption.categories[payload].checked = !state.asideOption.categories[payload].checked
+    },
+    menuClick(state){
+      state.showOption.show = !state.showOption.show
     }
   },
   actions: {

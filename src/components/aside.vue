@@ -1,7 +1,6 @@
 <template>
   <div id="aside-wrapper">
     <div id="aside-header">
-      <p style="margin:0; padding:0; font-size: 1.5rem; text-align:center; line-height:60px;">👍🏻&nbsp;👉🏻&nbsp;💙&nbsp;👉🏻&nbsp;👀 👩🏻‍💻</p>
     </div>
     <div id="aside-body">
       <ul id="categories">
