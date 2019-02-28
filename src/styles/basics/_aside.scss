@@ -59,13 +59,13 @@
     line-height: 0.1rem;
     #card {
       border: 1px solid $body-border;
-      width: 15rem;
+      width: 14rem;
       padding: 1rem;
-      padding-top:0;
+      padding-top: 0;
       margin: 0 auto;
       #face-img {
         position: relative;
-        left: 26px;
+        left: 14px;
         top: 0;
         clip-path: circle(120px at center);
       }

@@ -186,7 +186,7 @@ export const store = new Vuex.Store({
       name: 'Bigmac index',
       link: 'https://kimjihee318.github.io/bigMac_index.html',
       img: '~@/assets/IMG_0025.jpg',
-      imgLink: 'https://github.com/Kimjihee318/Kimjihee318.github.io/blob/master/images/bigMac_datavis.png?raw=true',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53572735-4be31680-3baf-11e9-8ae0-1d04c8174692.png',
       language: ['d3.js'],
       color: '#6b90cf',
       style: {
