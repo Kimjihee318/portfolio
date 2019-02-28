@@ -50,9 +50,5 @@ export default {
   }
   .material-icons {
     color: $heart-color;
-    position: absolute;
-    // bottom: -300px; //not work
-    right: 50px;
-    font-size: 1.4rem;
   }
 </style>

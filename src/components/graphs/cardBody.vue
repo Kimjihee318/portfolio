@@ -9,7 +9,7 @@
     <ul v-for="(item, index) in language" :key="index">
       <li :class="item">{{ item }}</li>
     </ul>
-    <div style="position:absolute; right:-10px; top: 235px; border-radius: 50%;"><i class="material-icons look" style="font-size: 1.3rem;" v-show="graphs[num].myPick">turned_in</i></div>
+    <!-- <div style="position:absolute; right:-10px; top: 235px; border-radius: 50%;"><i class="material-icons look" style="font-size: 1.3rem;" v-show="graphs[num].myPick">turned_in</i></div> -->
   </div>
 </template>
 <script>

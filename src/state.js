@@ -60,7 +60,7 @@ export const store = new Vuex.Store({
       name: 'Billing dashboard',
       link: 'https://docs.google.com/document/d/1VwzxB98dsVEeqw8ebqJbWvIaL7IRbc68MsR20Z3XEEY/edit?usp=sharing',
       img: '~@/assets/IMG_0025.jpg',
-      imgLink: 'https://user-images.githubusercontent.com/26508791/53301463-89d1f900-3896-11e9-8082-61e367cad008.jpg',
+      imgLink: 'https://user-images.githubusercontent.com/26508791/53559142-d6664e80-3b8c-11e9-894b-c0bb0518fdde.png',
       language: ['d3.js','pug','less','bootstrap'],
       color: '#6b90cf',
       style: {

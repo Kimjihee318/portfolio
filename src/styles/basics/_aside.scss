@@ -53,29 +53,45 @@
     }
   }
   .contact {
-    position: absolute;
-    bottom: 1rem;
+    // position: absolute;
+    // bottom: 1rem;
     font-size: 1rem;
-    line-height: 0.5rem;
+    line-height: 0.1rem;
     #card {
       border: 1px solid $body-border;
       width: 15rem;
-      height: 15rem;
       padding: 1rem;
+      padding-top:0;
       margin: 0 auto;
       #face-img {
         position: relative;
         left: 26px;
-        top: 13px;
+        top: 0;
         clip-path: circle(120px at center);
       }
-      > p {
-        position: relative;
-        top: -15px;
+       > p {
+        // position: relative;
+        // top: -15px;
         font-weight: 500;
+        padding-bottom: 0!important;
+      }
+      p {
+        line-height: 0.8rem;
+        a:link {
+          color: #000;
+          text-decoration: none;
+          }
+          a:visited {
+              color: #000;
+              text-decoration: none;
+          }
+          a:hover {
+              color: #000;
+              text-decoration: none;
+          }
       }
       div {
-        position: absolute;
+        // position: absolute;
         bottom: 0;
       }
     }

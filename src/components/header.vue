@@ -4,7 +4,7 @@
     <div id="menuIcon" @click="menuClick" ><i class="material-icons">menu</i></div>
     <ul id="menu">
       <a href="" v-show="menuShow"><li>About Jihee</li></a>
-      <a href="" v-show="menuShow"><li>Portfolio</li></a>
+      <a href="" v-show="menuShow"><li>portfolio</li></a>
        <ul class="color-pick" v-show="true">
          <li v-for="(color, index) in colors" :key="index" @click="getCol(color)" class="colors">
            <div class="color-circle" :style="{'background-color':color.color}"></div>

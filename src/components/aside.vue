@@ -24,7 +24,8 @@
           <div>
             <img id="face-img" v-show="cardShow" src="../assets/IMG_0025.jpg" alt="지희 짱" width="170px">
             <p>Developer & Designer</p>
-            <p>jiheekim318@gmail.com</p>
+            <a href="mailto:iheekim318@gmail.com"><p>jiheekim318@gmail.com</p></a>
+            <a href="https://github.com/Kimjihee318"><p>github.com/Kimjihee318</p></a>
           </div>
         </div>
       </div>
@@ -85,7 +86,7 @@ select {
 p:not(#card>p) {
   color: #777;
   &:nth-child(2){
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
     // border-bottom: 1px solid $body-border;
   }
   span {
@@ -95,11 +96,13 @@ p:not(#card>p) {
     font-weight: 800;
     font-size: 110%;
   }
-  #contact label {
-    font-size: 1rem;
-  }
-  #aside-body p {
-    font-size: 1rem;
-  }
+  
+}
+#aside-body>p{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.contact label {
+  font-size: 1rem;
 }
 </style>
