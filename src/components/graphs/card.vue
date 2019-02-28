@@ -52,7 +52,7 @@ export default {
     color: $heart-color;
     position: absolute;
     // bottom: -300px; //not work
-    right: 35px;
+    right: 50px;
     font-size: 1.4rem;
   }
 </style>

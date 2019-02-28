@@ -1,7 +1,7 @@
 @import '../setup/variables';
 
 #aside-wrapper {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   background-color: $sub-back;
   #aside-header {
@@ -59,13 +59,13 @@
     line-height: 0.5rem;
     #card {
       border: 1px solid $body-border;
-      width: 13rem;
+      width: 15rem;
       height: 15rem;
       padding: 1rem;
       margin: 0 auto;
       #face-img {
         position: relative;
-        left: 5px;
+        left: 26px;
         top: 13px;
         clip-path: circle(120px at center);
       }

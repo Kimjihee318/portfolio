@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <h2>JIHEE'S LAB</h2>
-    <div id="menu-icon" @click="menuClick" ><i class="material-icons">menu</i></div>
+    <div id="menuIcon" @click="menuClick" ><i class="material-icons">menu</i></div>
     <ul id="menu">
       <a href="" v-show="menuShow"><li>About Jihee</li></a>
       <a href="" v-show="menuShow"><li>Portfolio</li></a>

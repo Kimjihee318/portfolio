@@ -83,7 +83,6 @@ select {
   border-bottom: $border;
 }
 p:not(#card>p) {
-  font-size: 90%;
   color: #777;
   &:nth-child(2){
     padding-bottom: 10px;
@@ -95,6 +94,12 @@ p:not(#card>p) {
     color: $point-color;
     font-weight: 800;
     font-size: 110%;
+  }
+  #contact label {
+    font-size: 1rem;
+  }
+  #aside-body p {
+    font-size: 1rem;
   }
 }
 </style>
