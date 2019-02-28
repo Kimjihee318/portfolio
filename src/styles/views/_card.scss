@@ -17,9 +17,9 @@
     padding: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 3rem;
-    width: 44%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 29%;
+    margin-left: 2%;
+    margin-right: 2%;
     position: relative;
   }
   span {
@@ -45,10 +45,10 @@ p {
   width: 100%;
   >div {
     // height: 200px;
-    border-radius: 5px;
+    border-radius: 2px;
   }
   img {
-  // border-radius: 5px;
+  border-radius: 8px;
   }
   ul {
     position: relative;
@@ -78,8 +78,10 @@ p {
   // mobile
   #component-wrapper {
     display: block;
+    margin-right: 1rem;
     & > div {
       min-width: 100%;
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -92,6 +94,8 @@ p {
 @include media-breakpoint-between (lg, xl) {
   // macbook
   #component-wrapper > div {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     // min-width: 30.33333333333%;
   }
 }
