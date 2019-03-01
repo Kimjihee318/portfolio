@@ -9,7 +9,7 @@
     <ul v-for="(item, index) in language" :key="index">
       <li :class="item">{{ item }}</li>
     </ul>
-    <!-- <div style="position:absolute; right:-10px; top: 235px; border-radius: 50%;"><i class="material-icons look" style="font-size: 1.3rem;" v-show="graphs[num].myPick">turned_in</i></div> -->
+    <a :href="graphs[num].haveGit.link"><i class="fab fa-github" style="font-size: 1.3rem;" v-show="graphs[num].haveGit.done"></i></a>
   </div>
 </template>
 <script>
@@ -47,7 +47,10 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/setup/variables.scss";
 @import "../../styles/views/card.scss";
-.look { 
-  color: #ffd000;
+.fa-github { 
+  position: absolute;
+  right: 1px;
+  bottom: -40px;
+  opacity: 0.8;
 }
 </style>
