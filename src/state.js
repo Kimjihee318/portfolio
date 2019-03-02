@@ -40,7 +40,7 @@ export const store = new Vuex.Store({
     graphs: [
       {
         name: 'Vue-portfolio',
-        link: 'https://',
+        link: 'https://kimjihee318.github.io/portfolio/#/',
         img: '~@/assets/IMG_0025.jpg',
         imgLink: 'https://user-images.githubusercontent.com/26508791/53617063-d87deb00-3c28-11e9-8586-f99331644370.png',
         language: ['vue','vuex','es6','scss'],
