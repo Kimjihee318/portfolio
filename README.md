@@ -1,4 +1,4 @@
-# vue-googlefont
+# vue-portfolio
 
 > A Vue.js project
 
