@@ -1,6 +1,5 @@
 <template>
   <div id="comps" :style="{'backgroundColor': colorIn}">
-    <!-- <p>마음에 드는 포트폴리오의 <i class="material-icons" style="position:relative; top: 6px; color:#3274e6;">favorite_border</i>를 클릭 해보세요!</p> -->
     <card></card>
   </div>
 </template>

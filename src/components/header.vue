@@ -6,7 +6,7 @@
       <a href="" v-show="menuShow"><li>About Jihee</li></a>
       <a href="" v-show="menuShow"><li>portfolio</li></a>
        <ul class="color-pick" v-show="true">
-         <li v-for="(color, index) in colors" :key="index" @click="getCol(color)" class="colors">
+         <li v-for="(color, index) in colors" :key="index" @click="getColor(color)" class="colors">
            <div class="color-circle" :style="{'background-color':color.color}"></div>
          </li>
        </ul>
@@ -25,7 +25,7 @@ export default {
     }
   },
   methods: {
-    getCol (color){
+    getColor (color){
       this.$store.commit('colorVmodel', color);
     },
     menuClick() {

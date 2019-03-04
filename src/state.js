@@ -10,10 +10,10 @@ export const store = new Vuex.Store({
       defaultIndex: [0,1,2,3,4],
       payloadIndex: [],
       colors: [
-        {color: '#fff'},
-        {color: '#fffae6'}, 
-        {color: '#3f494f'},
-        {color: '#95bcff'}
+        {color: '#fff', font:'#000', github: '#aaa', heart: '💙'},
+        {color: '#fffae6', font:'#000', github: '#aaa', heart: '🧡'}, 
+        {color: '#3f494f', font:'#ddd', github: '#aaa', heart: '💛'},
+        {color: '#95bcff', font:'#000', github: '#aaa', heart: '💝'}
       ],
       // this is background-color
       colorIn: '#fff',
@@ -44,7 +44,6 @@ export const store = new Vuex.Store({
         img: '~@/assets/IMG_0025.jpg',
         imgLink: 'https://user-images.githubusercontent.com/26508791/53617063-d87deb00-3c28-11e9-8586-f99331644370.png',
         language: ['vue','vuex','es6','scss'],
-        color: '#6b90cf',
         style: {
         'vue': true, 
         'd3': false, 
@@ -62,7 +61,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53617059-d7e55480-3c28-11e9-8b71-27520c41aaa9.png',
       language: ['vue','vuex','es6','scss'],
-      color: '#6b90cf',
       style: {
       'vue': true, 
       'd3': false, 
@@ -80,7 +78,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53617062-d87deb00-3c28-11e9-8d91-f72198ed4ee4.png',
       language: ['d3','pug','less','bootstrap'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': true, 
@@ -98,7 +95,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53529918-93c35880-3b31-11e9-923f-85bc97c0617e.png',
       language: ['d3','pug','scss','bootstrap'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': true, 
@@ -116,7 +112,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53617375-48d93c00-3c2a-11e9-8b0a-467633653f82.png',
       language: ['d3'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': true, 
@@ -134,7 +129,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53617061-d87deb00-3c28-11e9-8d32-6e6dea004075.png',
       language: ['Tool: Sketch'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': false, 
@@ -152,7 +146,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53530558-860ed280-3b33-11e9-98e4-ec0860e5418b.png',
       language: ['d3'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': true, 
@@ -170,7 +163,6 @@ export const store = new Vuex.Store({
        img: '~@/assets/IMG_0025.jpg',
        imgLink: 'https://user-images.githubusercontent.com/26508791/53530420-244e6880-3b33-11e9-9768-c0590c08df24.png',
        language: ['d3'],
-       color: '#6b90cf',
        style: {
         'vue': false, 
         'd3': true, 
@@ -188,7 +180,6 @@ export const store = new Vuex.Store({
        img: '~@/assets/IMG_0025.jpg',
        imgLink: 'https://user-images.githubusercontent.com/26508791/53530421-244e6880-3b33-11e9-944f-9df92128d1b6.png',
        language: ['d3'],
-       color: '#6b90cf',
        style: {
         'vue': false, 
         'd3': true, 
@@ -206,7 +197,6 @@ export const store = new Vuex.Store({
       img: '~@/assets/IMG_0025.jpg',
       imgLink: 'https://user-images.githubusercontent.com/26508791/53572735-4be31680-3baf-11e9-8ae0-1d04c8174692.png',
       language: ['d3'],
-      color: '#6b90cf',
       style: {
         'vue': false, 
         'd3': true, 
@@ -224,7 +214,6 @@ export const store = new Vuex.Store({
        img: '~@/assets/IMG_0025.jpg',
        imgLink: 'https://user-images.githubusercontent.com/26508791/53530533-75f6f300-3b33-11e9-9063-5459d1a2c4f3.png',
        language: ['d3'],
-       color: '#6b90cf',
        style: {
         'vue': false, 
         'd3': true, 
@@ -242,7 +231,6 @@ export const store = new Vuex.Store({
        img: '~@/assets/IMG_0025.jpg',
        imgLink: 'https://user-images.githubusercontent.com/26508791/53530083-1e0bbc80-3b32-11e9-8da8-7c7ed96c99a5.png',
        language: ['d3'],
-       color: '#6b90cf',
        style: {
         'vue': false, 
         'd3': true, 
@@ -294,7 +282,7 @@ export const store = new Vuex.Store({
       state.fonts[size.num].information.defaultOptions.fontSize = size.value
     },
     colorVmodel (state, color) {
-      state.showOption.colorIn = color.color
+      state.showOption.colorIn = color
     },
     clickPlus (state, payload) {
       state.graphs[payload].show = !state.graphs[payload].show
