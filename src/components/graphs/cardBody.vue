@@ -9,7 +9,7 @@
     <ul v-for="(item, index) in language" :key="index">
       <li :class="item">{{ item }}</li>
     </ul>
-    <a :href="graphs[num].haveGit.link"><i class="fab fa-github" style="font-size: 1.3rem;" v-show="graphs[num].haveGit.done"></i></a>
+    <a :href="graphs[num].haveGit.link"><i class="fab fa-github" :style="{'color': colorIn.github }" v-show="graphs[num].haveGit.done"></i></a>
   </div>
 </template>
 <script>
@@ -34,6 +34,9 @@ export default {
     fillcolor (){
       return this.proj.color
     },
+    colorIn (){
+      return this.$store.state.showOption.colorIn
+    },
     language (){
       return this.proj.language
     },
@@ -52,5 +55,6 @@ export default {
   right: 1px;
   bottom: -40px;
   opacity: 0.8;
+  font-size: 1.3rem;
 }
 </style>

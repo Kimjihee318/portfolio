@@ -1,5 +1,5 @@
 <template>
-  <div id="comps" :style="{'backgroundColor': colorIn}">
+  <div id="comps" :style="{'backgroundColor': colorIn.color}">
     <card></card>
   </div>
 </template>

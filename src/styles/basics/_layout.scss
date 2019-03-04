@@ -80,7 +80,7 @@
 @include media-breakpoint-down (sm) {
   // @ < 576px
   // mobile
-  #menuIcon >i {
+  #menuIcon > i {
     position: absolute;
     top: -3px;
     right: 80px;

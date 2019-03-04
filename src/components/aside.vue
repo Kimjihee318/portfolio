@@ -16,7 +16,7 @@
         <label for="heart-box">Likes</label>
         <ul id="heart-box">
           <li v-for="(heart, index) in hearts" :key="index" v-show="heart">
-            <i class="material-icons">💙</i>
+            <i class="material-icons">{{ colorIn.heart }}</i>
           </li>
         </ul>
         <div id="card">
@@ -48,6 +48,9 @@ export default {
     },
     hearts (){
       return this.$store.state.showOption.hearts
+    },
+    colorIn (){
+      return this.$store.state.showOption.colorIn
     },
     cardShow (){
      if (this.$store.state.showOption.hearts.length>2){

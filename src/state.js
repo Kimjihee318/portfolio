@@ -6,17 +6,17 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     showOption: {
-      show: true,
+      show: !true,
       defaultIndex: [0,1,2,3,4],
       payloadIndex: [],
       colors: [
-        {color: '#fff', font:'#000', github: '#aaa', heart: '💙'},
-        {color: '#fffae6', font:'#000', github: '#aaa', heart: '🧡'}, 
-        {color: '#3f494f', font:'#ddd', github: '#aaa', heart: '💛'},
-        {color: '#95bcff', font:'#000', github: '#aaa', heart: '💝'}
+        {color: '#fff', font:'#000', github: '#aaa', heart: '💙', emptyHeart:'#3575e6'},
+        {color: '#fffae6', font:'#000', github: '#ff7800bb', heart: '🧡', emptyHeart:'#ff7800'}, 
+        {color: '#3f494f', font:'#ddd', github: '#fdda57bb', heart: '💛', emptyHeart:'#fdda57'},
+        {color: '#95bcff', font:'#000', github: '##f46b9fbb', heart: '💝', emptyHeart:'#f46b9f'}
       ],
       // this is background-color
-      colorIn: '#fff',
+      colorIn: {color: '#fff', font:'#000', github: '#aaa', heart: '💙', emptyHeart:'#3575e6'},
       heartIcon: [
         { icon: 'favorite_border', checked: false },
         { icon: 'favorite', checked: true }
@@ -275,7 +275,7 @@ export const store = new Vuex.Store({
     textVmodel (state, message) {
       state.fonts[message.num].information.defaultOptions.text = message.value
     },
-    weightVmodel (state, weight) {
+    weightVmodel (state , weight) {
       state.fonts[weight.num].information.defaultOptions.fontWeight = weight.value
     },
     sizeVmodel (state, size) {

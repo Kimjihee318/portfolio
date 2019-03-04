@@ -2,9 +2,9 @@
   <div id=component-wrapper>
     <div v-for="(item, index) in graphs" :key="index" 
     v-show="isVisible[index]">
-      <i @click="clickFavorite(); clickPlus(index);" class="material-icons" v-show="!graphs[index].show">💙</i>
-      <i @click="clickFavorite(); clickPlus(index);" class="material-icons" v-show="graphs[index].show">favorite_border</i>
-      <h4>{{ item.name }}</h4>
+      <i @click="clickFavorite(); clickPlus(index);" class="material-icons" v-show="!graphs[index].show">{{ colorIn.heart }}</i>
+      <i @click="clickFavorite(); clickPlus(index);" class="material-icons" v-show="graphs[index].show" :style="{'color': colorIn.emptyHeart}">favorite_border</i>
+      <h4 :style="{'color': colorIn.font}">{{ item.name }}</h4>
       <cardBody :num="index" :proj="item"></cardBody>
     </div>
   </div>
@@ -25,6 +25,9 @@ export default {
     isVisible (){
       return this.$store.getters.isVisible
     },
+     colorIn (){
+      return this.$store.state.showOption.colorIn
+    }
   },
   methods: {
     clickFavorite(){
@@ -47,8 +50,5 @@ export default {
     font-size: 1.1rem;
     font-weight: 400;
     text-transform: uppercase;
-  }
-  .material-icons {
-    color: $heart-color;
   }
 </style>
