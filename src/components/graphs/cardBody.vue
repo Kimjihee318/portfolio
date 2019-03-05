@@ -2,7 +2,7 @@
   <div id="cardBody" style="position: relative;">
     <div style="position: relative;">
       <a :href="link">
-        <img :src="imageLink" alt="images" width="100%" :style="{fill:fillcolor}">
+        <img :src="imageLink" alt="images" width="100%">
       </a>
        <div style=""></div>
     </div>
